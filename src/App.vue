@@ -3,7 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-  <router-view/>
+
+  <router-view :key="$route.fullPath"/>
 </template>
 
 <style>
@@ -26,5 +27,12 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.nested {
+  border: 1px solid rgba(0, 0, 0, .2);
+  padding: 15px;
+  background-color: hsla(240, 50%, 50%, .1);
+
 }
 </style>
